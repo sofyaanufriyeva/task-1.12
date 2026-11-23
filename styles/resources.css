@@ -1,0 +1,31 @@
+.resources {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .resources {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.resources__card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(244, 222, 255);
+    position: relative;
+    overflow: hidden;
+}
+
+.resources__badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: aquamarine;
+}

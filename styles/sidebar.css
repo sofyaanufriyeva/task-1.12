@@ -1,0 +1,134 @@
+.sidebar {
+    float: left;
+    width: 250px;
+    background-color: #faeefc;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar {
+        float: unset;
+        width: 100%;
+        flex-direction: row;
+        margin: 0;
+        justify-content: space-between;
+        position: static;
+    }
+}
+
+.sidebar__top-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-bottom: #f9d8ff 2px solid;
+    padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar__top-info {
+        border: none;
+    }
+
+    .sidebar__top-info h2 {
+        text-align: center;
+    }
+}
+
+.sidebar__image-wrapper {
+    position: relative;
+}
+
+.sidebar__image {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar__online-icon {
+    width: 16px;
+    height: 16px;
+    background-color: rgb(35, 242, 38);
+    position: absolute;
+    border-radius: 50%;
+    border: #faeefc 2px solid;
+    right: 8px;
+    bottom: 8px;
+}
+
+.sidebar__note {
+    color: #621071;
+}
+
+.sidebar__nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 40px;
+    border-bottom: #f9d8ff 2px solid;
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar__nav-list {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sidebar__nav-list {
+        flex-direction: row;
+        max-width: 400px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.sidebar__nav-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #6b3e73;
+    padding: 5px 10px;
+    transition: background-color .3s ease, color .3s ease, border-radius .3s ease;
+}
+
+.sidebar__nav-link:hover, .sidebar__nav-link:focus, .sidebar__nav-link:focus-visible {
+    color: #8013b7;
+    background-color: #f1d5ff;
+    border-radius: 10px;
+}
+
+.sidebar__git-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    color: #b726ff;
+    transition: color .3s;
+}
+
+.sidebar__git-link:hover, .sidebar__git-link:focus, .sidebar__git-link:focus-visible {
+    color: #821bb6;
+}
+
+.sidebar__git-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar__git-name {
+    font-weight: 600;
+}
+
+.sidebar__git-text {
+    font-size: 12px;
+}
